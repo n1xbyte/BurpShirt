@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'BurpShirt'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.portswigger.burp.extender:burp-extender-api:2.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+    implementation 'com.google.code.gson:gson:2.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    targetCompatibility '1.8'
+    sourceCompatibility '1.8'
+}
